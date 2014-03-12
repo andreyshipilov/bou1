@@ -1,4 +1,9 @@
 Header set Cache-Control "max-age=86400, must-revalidate"
+Options -Indexes
+
 RewriteEngine On
+# Rewrite domain
 RewriteCond	%{HTTP_HOST}	!^bearonunicycle.com$
 RewriteRule	^(.*)$	http://bearonunicycle.com/$1 [R=301,L]
+# Rewrite hackery
+RewriteRule	.*\.git/.* - [F]
