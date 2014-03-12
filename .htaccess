@@ -1,0 +1,4 @@
+Header set Cache-Control "max-age=86400, must-revalidate"
+RewriteEngine On
+RewriteCond	%{HTTP_HOST}	!^bearonunicycle.com$
+RewriteRule	^(.*)$	http://bearonunicycle.com/$1 [R=301,L]
