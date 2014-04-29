@@ -56,12 +56,15 @@ body {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
-h1 {
+h1, h2 {
     font: normal 3em "Circe Bold", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     padding: 1.5em 0 .5em;
 }
-h2 {
+    h1 span {
+        display: none;
+    }
+h3 {
     font: normal 2.6em "Circe Light", Helvetica, Arial, sans-serif;
 }
 a {
@@ -136,7 +139,7 @@ em {
     background-color: #c5c0b9;
     position: relative;
 }
-    #work-section h1 {
+    #work-section h2 {
         text-align: center;
     }
     #work-section .slides {
@@ -190,6 +193,10 @@ em {
             margin: 0 auto;
             position: relative;
         }
+            #contact-section .left .container .region,
+            #contact-section .left .container .country-name {
+                display: none;
+            }
             #contact-section .left .container td {
                 vertical-align: bottom;
             }
@@ -238,7 +245,7 @@ em {
             text-align: center;
             vertical-align: middle;
         }
-    #goodbye-section h1 {
+    #goodbye-section h2 {
         color: #fff;
         font-size: 7.2em;
         padding: 0;
@@ -340,11 +347,11 @@ em {
     html {
         min-width: 320px;
     }
-    h1 {
+    h1, h2 {
         font-size: 2.5em;
         padding-top: 1em;
     }
-    h2 {
+    h3 {
         font-size: 2.1em;
     }
     p {
@@ -407,10 +414,10 @@ em {
         height: 50%;
         width: 100%;
     }
-    #contact-section h1 {
+    #contact-section h2 {
         text-align: center;
     }
-    #goodbye-section h1 {
+    #goodbye-section h2 {
         font-size: 4em;
     }
     #contact-section .left .container .social a {
