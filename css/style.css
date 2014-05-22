@@ -82,9 +82,6 @@ em {
 }
 
 /* Layout */
-.sprite {
-    background: url("/i/sprite.png") no-repeat 0 0 transparent;
-}
 .section {
     height: 100%;
     min-height: 600px;
@@ -259,7 +256,6 @@ em {
     #goodbye-section a {
         color: #fff;
     }
-
 #menu {
     position: fixed;
     right: 0;
@@ -317,11 +313,22 @@ em {
         content: "\e603";
     }
 
+#one-page-love {
+    position: absolute;
+    display: block;
+    top: 5%;
+    right: 0;
+    width: 73px;
+    height: 56px;
+    text-indent: -9999px;
+    background: url("/i/one-page-love-award-right.png") no-repeat 0 0 transparent;
+}
+
 .icon-phone:before {
     content: "\e60c";
 }
 
-
+/* Media queries */
 @media all and (max-width: 1023px) {
     #hello-section h1 .horizontal {
         display: none;
