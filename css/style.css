@@ -190,6 +190,9 @@ em {
             margin: 0 auto;
             position: relative;
         }
+            #contact-section .left .container .url {
+                display: none;
+            }
             #contact-section .left .container .region,
             #contact-section .left .container .country-name {
                 display: none;

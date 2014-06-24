@@ -151,13 +151,14 @@
                 </article>
             </div>
         </div>
-        <div id="contact-section" class="section clearfix vcard">
+        <div id="contact-section" class="section clearfix vcard" itemscope itemtype="http://schema.org/Organization">
             <div class="left">
                 <div class="container">
                     <h2>Contact</h2>
-                    <h3 class="org fn">Bear On Unicycle</h3>
-                    <address>
-                        <p class="adr">
+                    <h3 class="org fn" itemprop="name">Bear On Unicycle</h3>
+                    <a href="http://bearonunicycle.com" class="url" itemprop="url">Bear On Unicycle</a>
+                    <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                        <p class="adr" itemprop="addressLocality">
                             <span class="locality">Adelaide</span>
                             <span class="region">SA</span>
                             <span class="country-name">Australia</span>
@@ -173,7 +174,7 @@
                             </td>
                             <td>
                                 <p>
-                                    <a href="mailto:inbox@bearonunicycle.com" class="email">inbox@bearonunicycle.com</a>
+                                    <a href="mailto:inbox@bearonunicycle.com" class="email" itemprop="email">inbox@bearonunicycle.com</a>
                                 </p>
                             </td>
                         </tr>
