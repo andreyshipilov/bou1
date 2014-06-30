@@ -74,6 +74,9 @@ a {
 p {
     font-size: 1.6em;
 }
+b {
+    font-weight: normal;
+}
 strong {
     font-weight: bold;
 }
