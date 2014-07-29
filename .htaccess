@@ -1,4 +1,7 @@
-Header set Cache-Control "public"
+<FilesMatch "\.(ico|jpg|jpeg|png|gif|js|css|svg)$">
+    Header set Cache-Control "max-age=290304000, public"
+</FilesMatch>
+
 Options -Indexes
 
 RewriteEngine On
