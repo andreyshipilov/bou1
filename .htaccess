@@ -1,4 +1,4 @@
-Header set Cache-Control "max-age=86400, must-revalidate"
+Header set Cache-Control "public"
 Options -Indexes
 
 RewriteEngine On
