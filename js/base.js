@@ -37,8 +37,8 @@ function redrawMap() {
     'use strict';
 
     // Set center and trigger resize.
-    map.setCenter(adelaide);
     google.maps.event.trigger(map, 'resize');
+    map.setCenter(adelaide);
 }
 
 google.maps.event.addDomListener(window, 'resize', function () {
