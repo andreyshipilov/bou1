@@ -399,6 +399,9 @@ em {
         top: 70%;
         bottom: initial;
     }
+        #work-section .fullPage-slidesNav li {
+            margin: 5px;
+        }
     #work-section .slide h3 {
         top: 60%;
         bottom: initial;
