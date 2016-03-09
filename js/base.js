@@ -72,6 +72,7 @@ $(function () {
         resize: false,
         slidesNavigation: true,
         afterLoad: function (anchorLink, index) {
+            ga('send', 'event', 'Section / ' + anchorLink, 'Scroll');
             switch (index) {
             case 1:
             case 3:
@@ -84,6 +85,9 @@ $(function () {
                 break;
             }
             redrawMap();
+        },
+        afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
+            ga('send', 'event', 'Work / ' + slideAnchor, 'Swipe');
         }
     });
 });

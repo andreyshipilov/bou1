@@ -9,8 +9,10 @@
 Options -Indexes
 
 RewriteEngine On
+
 # Rewrite domain.
 RewriteCond	%{HTTP_HOST}	!^bearonunicycle.com$
 RewriteRule	^(.*)$	https://bearonunicycle.com/$1 [R=301,L]
+
 # Rewrite hackery.
 RewriteRule	.*\.git/.* - [F]

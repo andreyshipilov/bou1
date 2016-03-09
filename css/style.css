@@ -92,6 +92,9 @@ em {
 .nowrap {
     white-space: nowrap;
 }
+#redirect * {
+    color: #fff;
+}
 #hello-section {
     background-color: #eb0900;
     position: relative;
@@ -417,7 +420,11 @@ em {
     #contact-section .left {
         height: 50%;
         width: 100%;
+        text-align: center;
     }
+        #contact-section table {
+            margin: 0 auto;
+        }
         #contact-section .left .container {
             width: 95%;
         }
@@ -436,8 +443,8 @@ em {
     #goodbye-section h2 {
         font-size: 4em;
     }
-    #contact-section .left .container .social a {
-        margin-right: 0;
+    #contact-section .left .container .social {
+        display: none;
     }
     #goodbye-section p {
         bottom: 100px;

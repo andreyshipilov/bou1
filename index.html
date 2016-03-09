@@ -99,7 +99,7 @@
                     <div class="screenshots">
                         <img src="/i/work/the-bibliotheca-desktop.jpg" width="572" height="400" alt="Triple Cherry Coffee website" />
                     </div>
-                    <h3>“<a href="http://bibliotheca.com.au/" rel="external">The Bibliotheca Bar</a>” logo</h3>
+                    <h3>“<a href="http://bibliotheca.com.au/" rel="external" onclick="javascript:ga('send', 'event', 'External / Bibliotheca', 'Click')">The Bibliotheca Bar</a>” logo</h3>
                 </article>
             </div>
             <div class="slide" data-anchor="triple-cherry-coffee">
@@ -107,7 +107,7 @@
                     <div class="screenshots">
                         <img src="/i/work/triple-cherry-coffee-desktop.jpg" width="572" height="400" alt="Triple Cherry Coffee website" />
                     </div>
-                    <h3>“<a href="http://triplecherrycoffee.com.au/" rel="external">Triple Cherry Coffee</a>” website</h3>
+                    <h3>“<a href="http://triplecherrycoffee.com.au/" rel="external" onclick="javascript:ga('send', 'event', 'External / Triple Cherry Coffee', 'Click')">Triple Cherry Coffee</a>” website</h3>
                 </article>
             </div>
             <div class="slide" data-anchor="iographica">
@@ -115,7 +115,7 @@
                     <div class="screenshots">
                         <img src="/i/work/iographica-desktop.jpg" width="572" height="400" alt="IOGraphica website" />
                     </div>
-                    <h3>“<a href="http://iographica.com/" rel="external">IOGraphica</a>” website</h3>
+                    <h3>“<a href="http://iographica.com/" rel="external" onclick="javascript:ga('send', 'event', 'External / IOGraphica', 'Click')">IOGraphica</a>” website</h3>
                 </article>
             </div>
             <div class="slide" data-anchor="bng">
@@ -123,7 +123,7 @@
                     <div class="screenshots">
                         <img src="/i/work/bng-desktop-1.jpg" width="572" height="400" alt="BNG Models modelling agency website" />
                     </div>
-                    <h3>“<a href="http://www.bngmodels.com/" rel="external">BNG Models</a>” modelling agency website</h3>
+                    <h3>“<a href="http://www.bngmodels.com/" rel="external" onclick="javascript:ga('send', 'event', 'External / BNG', 'Click')">BNG Models</a>” modelling agency website</h3>
                 </article>
             </div>
             <div class="slide" data-anchor="iba">
@@ -131,7 +131,7 @@
                     <div class="screenshots">
                         <img src="/i/work/iba-desktop.jpg" width="572" height="400" alt="Intellectual Building Agency website" />
                     </div>
-                    <h3>“<a href="http://www.iba2011.ru/" rel="external">Intellectual Building Agency</a>” website</h3>
+                    <h3>“<a href="http://www.iba2011.ru/" rel="external" onclick="javascript:ga('send', 'event', 'External / IBA', 'Click')">Intellectual Building Agency</a>” website</h3>
                 </article>
             </div>
             <div class="slide" data-anchor="yes-credit">
@@ -139,7 +139,7 @@
                     <div class="screenshots">
                         <img src="/i/work/yes-credit-desktop.jpg" width="572" height="400" alt="YesCredit website" />
                     </div>
-                    <h3>“<a href="http://www.yes-credit.ru/" rel="external">YesCredit</a>” website</h3>
+                    <h3>“<a href="http://www.yes-credit.ru/" rel="external" onclick="javascript:ga('send', 'event', 'External / YesCredit', 'Click')">YesCredit</a>” website</h3>
                 </article>
             </div>
             <div class="slide" data-anchor="prometheus">
@@ -174,10 +174,15 @@
                     <h3 class="org fn" itemprop="name">Bear On Unicycle</h3>
                     <a href="https://bearonunicycle.com" class="url" itemprop="url">Bear On Unicycle</a>
                     <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                        <p class="adr" itemprop="addressLocality">
-                            <span class="locality">Adelaide</span>
+                        <p class="adr">
+                            <span>We are from</span>
+                            <span class="locality" itemprop="addressLocality">Adelaide</span><span>.</span>
                             <span class="region">SA</span>
                             <span class="country-name">Australia</span>
+                        </p>
+                        <p>
+                            <span>Feel free to call us </span>
+                            <a href="tel:+61386581207" class="tel" itemprop="telephone">+61 386 581 207</a><span>.</span>
                         <p>
                     </address>
                     <br />
@@ -190,7 +195,7 @@
                             </td>
                             <td>
                                 <p>
-                                    <a href="mailto:inbox@bearonunicycle.com" class="email" itemprop="email">inbox@bearonunicycle.com</a>
+                                    <a href="mailto:inbox@bearonunicycle.com" class="email" itemprop="email" onclick="javascript:ga('send', 'event', 'Contact / Email', 'Click')">inbox@bearonunicycle.com</a>
                                 </p>
                             </td>
                         </tr>
@@ -219,27 +224,27 @@
         <nav>
             <ul id="menu" class="bright">
                 <li data-menuanchor="hello" class="active">
-                    <a href="#hello" class="icon-hello">
+                    <a href="#hello" class="icon-hello" onclick="javascript:ga('send', 'event', 'Menu / Home', 'Click')">
                         <span>Bear On Unicycle</span>
                     </a>
                 </li>
                 <li data-menuanchor="about">
-                    <a href="#about" class="icon-about">
+                    <a href="#about" class="icon-about" onclick="javascript:ga('send', 'event', 'Menu / About', 'Click')">
                         <span>About Bear On Unicycle</span>
                     </a>
                 </li>
                 <li data-menuanchor="work">
-                    <a href="#work" class="icon-work">
+                    <a href="#work" class="icon-work" onclick="javascript:ga('send', 'event', 'Menu / Work', 'Click')">
                         <span>Work of Bear On Unicycle</span>
                     </a>
                 </li>
                 <li data-menuanchor="contact">
-                    <a href="#contact" class="icon-contact">
+                    <a href="#contact" class="icon-contact" onclick="javascript:ga('send', 'event', 'Menu / Contact', 'Click')">
                         <span>Contact Bear On Unicycle</span>
                     </a>
                 </li>
                 <li data-menuanchor="goodbye">
-                    <a href="#goodbye" class="icon-goodbye">
+                    <a href="#goodbye" class="icon-goodbye" onclick="javascript:ga('send', 'event', 'Menu / Goodbye', 'Click')">
                         <span>Thank you, Bear On Unicycle</span>
                     </a>
                 </li>
