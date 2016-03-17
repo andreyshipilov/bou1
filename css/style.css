@@ -87,7 +87,8 @@ em {
 /* Layout */
 .section {
     height: 100%;
-    min-height: 600px;
+    /*min-height: 600px;*/
+    box-sizing: border-box;
 }
 .nowrap {
     white-space: nowrap;
@@ -139,11 +140,16 @@ em {
         }
 #work-section {
     height: 100%;
-    background-color: #c5c0b9;
+    background-color: #fff;
     position: relative;
 }
     #work-section h2 {
         text-align: center;
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 100%;
+        z-index: 100;
     }
     #work-section .slides {
         position: absolute;
@@ -153,33 +159,44 @@ em {
     }
     #work-section .slide {
         position: relative;
+        box-sizing: border-box;
+        background-size: contain;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
     }
-        #work-section .slide .screenshots {
-            position: absolute;
-            top: 50%;
-            margin-top: -200px;
-            width: 100%;
-            font-size: 1.6em;
-            text-align: center;
-        }
         #work-section .slide  h3 {
             position: absolute;
-            width: 100%;
-            text-align: center;
-            bottom: 10%;
+            top: 100px;
+            left: 5%;
             font-size: 1.6em;
+            background-color: #eb0900;
+            padding: 0.5em;
+            color: #fff;
+            line-height: 1.5;
         }
             #work-section .slide  h3 a {
-                color: #333;
+                color: #fff;
             }
-            #work-section .slide h3 a:hover {
-                color: #eb0900;
-            }
-    #work-section .controlArrow {
-        top: -9999px;
+    #work-section .fp-slidesNav {
+        bottom: 50px !important;
     }
-    #work-section .fullPage-slidesNav {
-        bottom: 4%;
+    #previous-slide {
+        position: absolute;
+        display: block;
+        bottom: 40px;
+        z-index: 100;
+        left: 5%;
+        padding: 0 20px;
+        margin-left: -20px;
+    }
+    #next-slide {
+        position: absolute;
+        display: block;
+        bottom: 40px;
+        z-index: 100;
+        right: 5%;
+        padding: 0 20px;
+        margin-right: -20px;
     }
 #contact-section {
     height: 100%;
@@ -283,10 +300,10 @@ em {
         padding: 9px 24px;
         margin: 5px;
         text-decoration: none;
-        -webkit-transition:color 0.2s ease-in;
-        -moz-transition:color 0.2s ease-in;
-        -o-transition:color 0.2s ease-in;
-        transition:color 0.2s ease-in;
+        -webkit-transition: color 0.1s;
+        -moz-transition: color 0.1s;
+        -o-transition: color 0.1s;
+        transition: color 0.1s;
     }
         #menu a span {
             display: none;
@@ -373,9 +390,6 @@ em {
     p {
         font-size: 1.4em;
     }
-    .section {
-        min-height: 410px !important;
-    }
     #hello-section table td {
         padding-bottom: 45px;
     }
@@ -398,25 +412,15 @@ em {
     #about-section span.nowrap {
         white-space: normal;
     }
-    #work-section .fullPage-slidesNav {
-        top: 70%;
-        bottom: initial;
+    #work-section .slide {
+        background-repeat: no-repeat;
     }
-        #work-section .fullPage-slidesNav li {
-            margin: 5px;
-        }
-    #work-section .slide h3 {
-        top: 60%;
-        bottom: initial;
+    #previous-slide,
+    #next-slide {
+        bottom: auto;
+        top: 50%;
+        margin-top: -25px;
     }
-    #work-section .slide .screenshots {
-        top: 18%;
-        margin-top: 0;
-    }
-        #work-section .slide .screenshots img {
-            width: 70%;
-            height: initial;
-        }
     #contact-section .left {
         height: 50%;
         width: 100%;
@@ -439,6 +443,7 @@ em {
     }
     #contact-section h2 {
         text-align: center;
+        margin-top: 1.5em;
     }
     #goodbye-section h2 {
         font-size: 4em;
@@ -464,4 +469,13 @@ em {
             #menu li a {
                 padding: 9px 7px;
             }
+}
+
+
+.fp-slidesNav ul li a span {
+    background-color: #eb0900 !important;
+}
+.fp-slidesNav ul li {
+    margin-left: 2px !important;
+    margin-right: 2px !important;
 }

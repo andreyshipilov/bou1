@@ -51,43 +51,55 @@ google.maps.event.addDomListener(window, 'resize', function () {
 $(function () {
     'use strict';
 
-    var menu = $('#menu');
+    var $menu = $('#menu');
 
     // We also love validation.
     $('<meta></meta>').attr({
         'name': 'apple-mobile-web-app-title',
         'content': 'BOU'
-    }).appendTo('head')
+    }).appendTo('head');
 
     // Init map.
     initializeMap();
 
     // Init fullPage.js.
-    $.fn.fullpage({
-        anchors: ['hello', 'about', 'work', 'contact', 'goodbye'],
+    $('#bou-page').fullpage({
+        anchors: ['hello', 'we', 'are', 'bou', 'goodbye'],
         menu: '#menu',
-        scrollingSpeed: 250,
+        scrollingSpeed: 500,
         verticalCentered: false,
-        easing: false,
-        resize: false,
+        paddingTop: 0,
+        paddingBottom: 0,
         slidesNavigation: true,
+        fitToSectionDelay: 0,
+        controlArrows: false,
         afterLoad: function (anchorLink, index) {
             ga('send', 'event', 'Section / ' + anchorLink, 'Scroll');
             switch (index) {
-            case 1:
-            case 3:
-            case 5:
-                menu.addClass('bright').removeClass('dark');
-                break;
-            case 2:
-            case 4:
-                menu.addClass('dark').removeClass('bright');
-                break;
+                case 1:
+                case 5:
+                    $menu.addClass('bright').removeClass('dark');
+                    break;
+                case 2:
+                case 3:
+                case 4:
+                    $menu.addClass('dark').removeClass('bright');
+                    break;
             }
             redrawMap();
         },
         afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
             ga('send', 'event', 'Work / ' + slideAnchor, 'Swipe');
         }
+    });
+
+    $('#previous-slide').on('click', function (e) {
+        e.preventDefault();
+        $.fn.fullpage.moveSlideLeft();
+    });
+
+    $('#next-slide').on('click', function (e) {
+        e.preventDefault();
+        $.fn.fullpage.moveSlideRight();
     });
 });
