@@ -31,6 +31,7 @@
 }
 
 /* Reset */
+* {outline: none;}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
 table{border-collapse:collapse;border-spacing:0;}
 td,tr{vertical-align:top;}
@@ -69,7 +70,6 @@ h3 {
 }
 a {
     color: #eb0900;
-    outline: none;
 }
 p {
     font-size: 1.6em;
@@ -150,6 +150,7 @@ em {
         left: 0;
         width: 100%;
         z-index: 100;
+        padding-bottom: 0;
     }
     #work-section .slides {
         position: absolute;
@@ -238,9 +239,10 @@ em {
                 #contact-section .left .container .social a {
                     text-decoration: none;
                     color: #333;
-                }
-                #contact-section .left .container .social a {
                     margin-right: 15px;
+                }
+                #contact-section .left .container .social a:hover {
+                    color: #eb0900;
                 }
                 #contact-section .left .container .social .icon-twitter-:before {
                     content: "\e60a";
@@ -402,18 +404,11 @@ em {
         #about-section table td {
             padding-bottom: 70px;
         }
-            #about-section table td p {
-                display: inline;
-            }
-            #about-section table td p.last {
-                display: block;
-                margin-top: 1em;
+            #about-section table td p br {
+                display: none;
             }
     #about-section span.nowrap {
         white-space: normal;
-    }
-    #work-section .slide {
-        background-repeat: no-repeat;
     }
     #previous-slide,
     #next-slide {
